@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 mnist = fetch_openml('mnist_784', cache=False)
 X_dataset = mnist.data.astype('float32').reshape(-1, 1, 28, 28)/255
 y_dataset = mnist.target.astype('int64')
+XCnn, XCnnt, y, yt = train_test_split(X_dataset, y_dataset, test_size=1/7, ) #random_state=42)
 
 def plot_example(X, y):
     """Plot the first 5 images and their labels in a row."""
