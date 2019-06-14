@@ -2,11 +2,7 @@ from sklearn.datasets import fetch_openml
 from sklearn.model_selection import train_test_split
 import numpy as np
 import matplotlib.pyplot as plt
-import torch
-from torch import nn
-import torch.nn.functional as F
-from skorch import NeuralNetClassifier
-from sklearn.metrics import accuracy_score
+
 
 mnist = fetch_openml('mnist_784', cache=False)
 X_dataset = mnist.data.astype('float32')
